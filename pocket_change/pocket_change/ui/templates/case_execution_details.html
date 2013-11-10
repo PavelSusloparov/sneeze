@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title>Pocket Change - Case Execution Details</title>
+	<link rel=stylesheet media=screen href='{{ url_for('core_ui.static', filename='case_execution_details.css') }}'>
+</head>
+<body>
+	<div class=case_execution_details>
+		<div class=execution_details>
+			<div class=links>
+				<a href='{{ url_for('core_ui.cycle_listing') }}'> Cycle_listing </a>
+				<a href='{{ url_for('core_ui.cycle_cases', test_cycle_id=case_execution.test_cycles[0].id) }}'> Cycle_case_view_{{ case_execution.test_cycles[0].id }} </a>
+			</div>
+			<div class=header_container>
+				<div class=test_container>
+					<div class=case>
+						<div class=left_2_columns_case>
+							<div class=case_id> {{ case_execution.case_id }} </div>
+						</div>
+						<div class=right_2_columns_case>
+							<div class=label>{{ case_execution.case.label }}</div>
+						</div>
+					</div>
+				</div>
+				<div class=children_section>
+					<div class=border>
+						<div class=execution_container>
+							<div class=left_3_columns>
+								<div class=execution_id>{{ case_execution.id }}</div>
+							</div>
+							<div class=right_3_columns>
+								<div class=result>
+									<div class=result_status_{{ case_execution.result.lower().replace(' ', '') }}>{{ case_execution.result.upper() }}</div>
+								</div>
+							</div>
+							<div class=center_3_columns>
+								<div class=description>{{ case_execution.description }}</div>
+							</div>
+						</div>
+						<div class=log_container>
+							<div class=left_2_columns>
+								<div class=start_time>{{ case_execution.start_time }}</div>
+								<div class=end_time>{{ case_execution.end_time }}</div>
+							</div> 
+							<div class=right_2_columns>
+								<div class=environment>{{ case_execution.execution_batch.environment }}</div>
+								<div class=host>{{ case_execution.execution_batch.host }}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<ol class=log_list>
+				{%- for log in case_execution.log_messages %}
+					<li class=log>
+						<div class=border>
+							<div class=left_2_columns>
+								<div class=time>{{ log.time_logged }}</div>
+								<div class=level>{{ log.level }}</div>
+								<div class=source>{{ log.source }}</div>
+							</div>
+							<div class=right_2_columns>
+								<div class=message>{{ log.message }}</div>
+							</div>
+						</div>
+					</li>
+				{%- endfor %}
+			</ol>
+		
+			<ol class=cycle_links>
+				{%- for test_cycle in case_execution.test_cycles %}
+					<li>
+						<div class=ids>
+							<div class=cycle_id>
+								<a class=no_underline href='{{ url_for('core_ui.cycle_cases', test_cycle_id=test_cycle.id) }}'>{{ test_cycle.id }}</a>
+							</div>
+						</div>
+						<div class=description>{{ test_cycle.description }}</div>
+						<div class=names>
+							<div class=cycle_name>{{ test_cycle.name }}</div>
+						</div>
+					</li>
+				{%- endfor %}
+			</ol>
+		</div>
+	</div>
+</body>
+</html>

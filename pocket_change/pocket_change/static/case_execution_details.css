@@ -1,0 +1,384 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+div.case_execution_details
+{
+	position:relative;
+	margin: 10px 0px 0px 10px;
+    width: 1000px;
+}
+
+div.case_execution_details div.execution_details
+{
+	width: 100%;
+  	margin: 10px auto;
+  	padding: 10px;
+  	border-radius: 3px;
+}
+
+div.case_execution_details div.execution_details div.links{}
+div.case_execution_details div.execution_details div.links a
+{
+	text-decoration: none;
+	margin-right: 20px;
+}
+div.case_execution_details div.execution_details a
+{
+	text-decoration: none;
+	color: blue;
+}
+
+div.case_execution_details div.execution_details a:hover
+{
+	text-decoration: underline;
+}
+div.case_execution_details div.execution_details a:visited
+{
+	color: darkblue;
+}
+
+div.case_execution_details div.execution_details div.header_container
+{
+	border-radius: 3px;
+	text-align: center;
+	background: #008080;
+	margin-bottom: 10px;
+}
+
+div.case_execution_details div.execution_details div.header_container div.test_container
+{
+  	position: relative;
+  	clear:both;
+  	border-radius: 3px;
+  	padding: 10px 10px 0px 10px;
+}
+
+div.case_execution_details div.execution_details div.header_container div.test_container div.case{}
+
+div.case_execution_details div.execution_details div.header_container div.test_container div.case div.left_2_columns_case
+{
+	width: 50px;
+	float: left;
+	font-size: 18px;
+}
+
+div.case_execution_details div.execution_details div.header_container div.test_container div.case div.left_2_columns_case div.case_id
+{
+	width: 100%;
+	padding: 10px 0px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	background:white;
+	border-radius: 3px;
+}
+
+div.case_execution_details div.execution_details div.header_container div.test_container div.case div.right_2_columns_case
+{
+	padding-left: 60px;
+	width: 93%;
+}
+
+div.case_execution_details div.execution_details div.header_container div.test_container div.case div.right_2_columns_case .label
+{
+	width:100%;
+	padding: 10px 0px;
+	background: white;
+	border-radius: 3px;
+	white-space: pre-wrap;      /* CSS3 */   
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -pre-wrap;     /* Opera <7 */   
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    word-wrap: break-word;      /* IE */
+    text-align: center;
+}
+
+div.case_execution_details div.execution_details div.header_container div.children_section{
+	padding-bottom: 10px;
+}
+div.case_execution_details div.execution_details div.header_container div.children_section div.border{
+	border:1px dotted yellow;
+	padding: 10px 10px 10px 10px;
+	margin: 10px;
+}
+div.case_execution_details div.execution_details div.header_container div.children_section div.execution_container{
+}
+
+div.case_execution_details div.execution_details div.header_container div.children_section div.execution_container div.left_3_columns
+{
+	width: 50px;
+	float: left;
+}
+
+div.case_execution_details div.execution_details div.header_container div.children_section div.execution_container div.left_3_columns div.execution_id
+{
+	width:100%;
+	padding: 10px 0px;
+	border-radius: 3px;
+	text-align: center;
+  	background: white;
+  	font-size: 18px;
+}
+
+div.case_execution_details div.execution_details div.header_container div.children_section div.execution_container div.right_3_columns
+{
+	width: 150px;
+	float: right;
+}
+div.case_execution_details div.execution_details div.header_container div.children_section div.execution_container div.right_3_columns div.result
+{
+	padding: 10px 0px;
+	border-radius: 3px;
+	text-align: center;
+	background: white;
+	font-size: 18px;
+}
+
+div.case_execution_details div.execution_details div.header_container div.children_section div.execution_container div.center_3_columns
+{
+	margin-left:60px;
+	margin-right:160px;
+}
+
+div.case_execution_details div.execution_details div.header_container div.children_section div.execution_container div.center_3_columns div.description
+{
+	padding: 10px 0px;
+	background: white;
+	text-align: center;
+	border-radius: 3px;
+}
+
+/* log_container */
+div.case_execution_details div.execution_details div.header_container div.children_section div.log_container{
+	padding: 10px;
+}
+
+div.case_execution_details div.execution_details div.header_container div.children_section div.log_container div.left_2_columns
+{
+	width: 120px;
+	float: left;
+}
+
+div.case_execution_details div.execution_details div.header_container div.children_section div.log_container div.left_2_columns div.start_time
+{
+	width: 100%;
+	padding: 0px 9px;
+	border-radius: 3px;
+  	background: white;
+	text-align: center;
+}
+
+div.case_execution_details div.execution_details div.header_container div.children_section div.left_2_columns div.end_time
+{
+	width:100%;
+	padding: 0px 9px;
+	margin-top: 10px;
+	border-radius: 3px;
+  	background: white;
+	text-align: center;
+}
+
+div.case_execution_details div.execution_details div.header_container div.children_section div.log_container div.right_2_columns
+{
+	padding-left: 150px;
+	width: 92%;
+}
+
+div.case_execution_details div.execution_details div.header_container div.children_section div.log_container div.right_2_columns div.environment
+{
+	width:91%;
+	padding: 10px 0px;
+	border-radius: 3px;
+  	background: white;
+}
+div.case_execution_details div.execution_details div.header_container div.children_section div.log_container div.right_2_columns div.host
+{
+	width:91%;
+	padding: 10px 0px;
+	margin-top: 10px;
+	border-radius: 3px;
+  	background: white;
+}
+/*============================*/
+/*=== Execution details end ==*/
+/*============================*/
+
+/*============================*/
+/*========= log list =========*/
+/*============================*/
+
+ol.log_list{
+	list-style-type: none;
+  	border-radius: 3px;
+  	background: #008080;
+}
+
+ol.log_list li
+{
+  	position: relative;
+  	padding: 10px;
+	text-align: center;
+	border-radius: 3px;
+	clear:both;
+}
+ol.log_list li div.border{
+	
+	padding: 10px;
+	border:1px dotted yellow;
+}
+ol.log_list li div.border div.left_2_columns
+{
+	width: 120px;
+	float: left;
+}
+
+ol.log_list li div.border div.left_2_columns div.time
+{
+	width: 100%;
+	padding: 10px 0px;
+	text-align: center;
+	background:white;
+	border-radius: 3px;
+}
+ol.log_list li div.border div.left_2_columns div.level
+{
+	width: 100%;
+	padding: 10px 0px;
+	text-align: center;
+	background:white;
+	border-radius: 3px;
+	margin-top: 10px;
+}
+ol.log_list li div.border div.left_2_columns div.source
+{
+	width: 100%;
+	padding: 10px 0px;
+	text-align: center;
+	background:white;
+	border-radius: 3px;
+	white-space: pre-wrap;      /* CSS3 */   
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -pre-wrap;     /* Opera <7 */   
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    word-wrap: break-word;      /* IE */
+    margin-top: 10px;
+}
+
+ol.log_list li div.border div.right_2_columns
+{
+	padding-left: 130px;
+	width: 86.5%;
+}
+
+ol.log_list li div.border div.right_2_columns div.message
+{
+	width:100%;
+	padding: 60px 0px;
+	background: white;
+	border-radius: 3px;
+	white-space: pre-wrap;      /* CSS3 */   
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -pre-wrap;     /* Opera <7 */   
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    word-wrap: break-word;      /* IE */
+    text-align: center;
+}
+/*============================*/
+/*======= log list end =======*/
+/*============================*/
+
+
+/*============================*/
+/*=======Cycle links =========*/
+/*============================*/
+ol.cycle_links
+{
+  	list-style-type: none;
+  	border-radius: 3px;
+  	background: #008080;
+  	margin-top: 10px;
+}
+
+ol.cycle_links li
+{
+  	position: relative;
+  	margin-bottom: 30px;
+  	padding: 10px;
+  	clear:both;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 3px;
+}
+
+ol.cycle_links li div.ids
+{
+	width: 50px;
+	float: left;
+	font-size: 18px;
+}
+
+ol.cycle_links li div.ids div.cycle_id
+{
+	width: 100%;
+	padding: 10px 0px;
+	text-align: center;
+	background: white;
+	border-radius: 3px;
+}
+
+ol.cycle_links li div.ids div.cycle_id a.no_underline
+{
+	text-decoration: none;
+}
+
+ol.cycle_links li div.description
+{
+	width: 810px;
+	float: right;
+	padding: 10px 0px;
+	border-radius: 3px;
+	white-space: pre-wrap;      /* CSS3 */   
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -pre-wrap;     /* Opera <7 */   
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    word-wrap: break-word;      /* IE */
+    background: white;
+    border-radius: 3px;
+}
+
+ol.cycle_links li div.names
+{
+	margin-left:60px;
+	margin-right:820px;
+}
+
+ol.cycle_links li div.names div.cycle_name
+{
+	width:100%;
+	padding: 10px 0px;
+	background: white;
+	border-radius: 3px;
+}
+
+/*============================*/
+/*=======Cycle links end =====*/
+/*============================*/
+
+/* EOF */

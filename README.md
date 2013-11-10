@@ -1,4 +1,2 @@
 sneeze
 ======
-
-sneeze

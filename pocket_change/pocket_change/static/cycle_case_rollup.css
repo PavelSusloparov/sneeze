@@ -1,0 +1,352 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+/* Global container */
+.cycle_case_rollup
+{
+	position:relative;
+	margin: 10px 0px 0px 10px;
+    width: 1000px;
+}
+/*============================*/
+/*=======Cycle header==========*/
+/*============================*/
+
+div.cycle_container
+{
+	width: 100%;
+  	margin: 10px auto;
+  	padding: 10px;
+}
+
+div.cycle_container a
+{
+	text-decoration: none;
+	color: blue;
+}
+
+div.cycle_container a:hover
+{
+	text-decoration: underline;
+}
+div.cycle_container a:visited
+{
+	color: darkblue;
+}
+div.cycle_container div.links{}
+div.cycle_container div.links a
+{
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+div.cycle_container div.header_container
+{
+	background: #008080;
+	border-radius: 3px;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+}
+
+div.cycle_container div.header_container div.ids
+{
+	width: 50px;
+	float: left;
+	font-size: 18px;
+}
+
+div.cycle_container div.header_container div.ids div.cycle_id
+{
+	width: 100%;
+	padding: 10px 0px;
+	text-align: center;
+	background: white;
+	border-radius: 3px;
+}
+div.cycle_container div.header_container div.ids .jira_id
+{
+	width: 100%;
+	padding: 10px 0px;
+	background: white;
+	margin-top: 10px;
+	border-radius: 3px;
+}
+
+div.cycle_container div.header_container div.description
+{
+	width: 810px;
+	float: right;
+	padding: 10px 0px;
+	border-radius: 3px;
+	white-space: pre-wrap;      /* CSS3 */   
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -pre-wrap;     /* Opera <7 */   
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    word-wrap: break-word;      /* IE */
+    background: white;
+    border-radius: 3px;
+}
+div.cycle_container div.header_container div.names
+{
+	margin-left:60px;
+	margin-right:820px;
+}
+div.cycle_container div.header_container div.names .cycle_name
+{
+	width:100%;
+	padding: 10px 0px;
+	background: white;
+	border-radius: 3px;
+}
+div.cycle_container div.header_container div.names .jira_name
+{
+	width:100%;
+	padding: 10px 0px;
+	background: white;
+	margin-top: 10px;
+	border-radius: 3px;
+}
+/*============================*/
+/*=======Cycle header end=====*/
+/*============================*/
+
+/*============================*/
+/*=======Cycle table==========*/
+/*============================*/
+
+div.cycle_container ol
+{
+  	list-style-type: none;
+  	border-radius: 3px;
+  	padding: 10px;
+}
+
+div.cycle_container li.additional_container
+{
+  	position: relative;
+  	margin-bottom: 30px;
+  	clear:both;
+  	border-radius: 3px;
+  	/* border:1px dotted yellow; */
+  	padding: 10px;
+  	background:#008080;
+}
+
+/* Two columns */
+/* Case */
+div.case
+{
+	
+}
+div.cycle_container li.additional_container div.case div.left_2_columns_case
+{
+	width: 50px;
+	float: left;
+	font-size: 18px;
+}
+
+div.cycle_container li.additional_container div.case div.left_2_columns_case div.case_id
+{
+	width: 100%;
+	padding: 10px 0px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	background:white;
+	border-radius: 3px;
+}
+
+div.cycle_container li.additional_container div.case div.right_2_columns_case
+{
+	padding-left: 60px;
+	width: 93%;
+}
+
+div.cycle_container li.additional_container div.case div.right_2_columns_case .label
+{
+	width:100%;
+	padding: 10px 0px;
+	background: white;
+	border-radius: 3px;
+	white-space: pre-wrap;      /* CSS3 */   
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -pre-wrap;     /* Opera <7 */   
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    word-wrap: break-word;      /* IE */
+    text-align: center;
+}
+
+/* Jira */
+div.cycle_container li.additional_container div.jira
+{
+	margin-top: 10px;
+}
+div.cycle_container li.additional_container div.jira div.left_2_columns_jira
+{
+	width: 130px;
+	float: left;
+}
+
+div.cycle_container li.additional_container div.jira div.left_2_columns_jira div.jira_summary
+{
+	padding: 10px 0px;
+	text-align: center;
+	background:white;
+	border-radius: 3px;
+}
+
+div.cycle_container li.additional_container div.jira div.right_2_columns_jira
+{
+	padding-left: 140px;
+	width: 85%;
+}
+
+div.cycle_container li.additional_container div.jira div.right_2_columns_jira div.jira_issues
+{
+	width:100%;
+	padding: 10px 0px;
+	background: white;
+	border-radius: 3px;
+	white-space: pre-wrap;      /* CSS3 */   
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -pre-wrap;     /* Opera <7 */   
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    word-wrap: break-word;      /* IE */
+    text-align: center;
+}
+
+div.cycle_container li.additional_container ol
+{
+	list-style-type: none;
+	border-radius: 3px;
+	text-align: center;
+	border:1px dotted yellow;
+	padding: 10px;
+}
+
+div.cycle_container li.additional_container li
+{
+  	position: relative;
+  	clear:both;
+}
+
+/* execution_container */
+div.cycle_container li.additional_container li div.execution_container{
+}
+
+div.cycle_container li.additional_container li div.execution_container div.left_3_columns
+{
+	width: 50px;
+	float: left;
+}
+
+div.cycle_container li.additional_container li div.execution_container div.left_3_columns div.execution_id
+{
+	width:100%;
+	padding: 10px 0px;
+	border-radius: 3px;
+	text-align: center;
+  	background: white;
+  	font-size: 18px;
+}
+
+div.cycle_container li.additional_container li div.execution_container div.right_3_columns
+{
+	width: 150px;
+	float: right;
+}
+div.cycle_container li.additional_container li div.execution_container div.right_3_columns div.result
+{
+	padding: 10px 0px;
+	border-radius: 3px;
+	text-align: center;
+	background: white;
+	font-size: 18px;
+}
+
+div.cycle_container li.additional_container li div.execution_container div.center_3_columns
+{
+	margin-left:60px;
+	margin-right:160px;
+}
+
+div.cycle_container li.additional_container li div.execution_container div.center_3_columns div.description
+{
+	padding: 10px 0px;
+	background: white;
+	text-align: center;
+	border-radius: 3px;
+}
+
+/* log_container */
+div.cycle_container li.additional_container li div.log_container{
+	margin-top: 10px;
+}
+
+div.cycle_container li.additional_container li div.log_container div.left_2_columns
+{
+	width: 120px;
+	float: left;
+}
+
+div.cycle_container li.additional_container li div.log_container div.left_2_columns div.start_time
+{
+	width: 100%;
+	padding: 0px 9px;
+	margin-bottom: 10px;
+	border-radius: 3px;
+  	background: white;
+	text-align: center;
+}
+
+div.cycle_container li.additional_container li div.log_container div.left_2_columns div.end_time
+{
+	width:100%;
+	padding: 0px 9px;
+	margin-bottom: 10px;
+	border-radius: 3px;
+  	background: white;
+	text-align: center;
+}
+
+div.cycle_container li.additional_container li div.log_container div.right_2_columns
+{
+	padding-left: 150px;
+	width: 92%;
+}
+
+div.cycle_container li.additional_container li div.log_container div.right_2_columns div.last_log_message
+{
+	width:91%;
+	padding: 10px 0px;
+	border-radius: 3px;
+  	background: white;
+  	white-space: pre-wrap;      /* CSS3 */   
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -pre-wrap;     /* Opera <7 */   
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    word-wrap: break-word;      /* IE */
+}
+
+/*============================*/
+/*=======Cycle table end =====*/
+/*============================*/

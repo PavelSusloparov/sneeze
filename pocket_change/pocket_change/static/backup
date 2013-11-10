@@ -1,0 +1,50 @@
+		               	<!-- <div class=block>
+                	<div class=ids>
+                		ids
+                	</div>
+                	<div class=description>
+                		description
+                	</div>
+                	<div class=names>
+                		names
+                	</div>
+                		<div class=cycle_info>
+                			<div class=id>id sadasd asdasd dasd asd asdasd as dasds adas dasdas </div>
+                			<div class=name>name</div>
+                		</div>
+                		<div class=jira_info>
+                			<div class=id>jira_id</div>
+                			<div class=name>jira_name bsadbasdas adsasd asdasfd sf sdfsd</div>
+                		</div>
+                		
+						<div class=cycle_id> <a href='{{ url_for('core_ui.cycle_cases', test_cycle_id=cycle.id) }}'>cycle.id</a> </div>
+						<div class=name> <a href='{{ url_for('core_ui.cycle_cases', test_cycle_id=cycle.id) }}'>cycle.name</a> </div>
+						{%- if use_jira and jira_host and cycle.id in cycle_issues %}
+							<div class=jira_issue> <a href='{{ jira_host }}/browse/{{ cycle_issues[cycle.id].key }}'>{{ cycle_issues[cycle.id].key }}</a> </div>
+							<div class=jira_status> {{ cycle_issues[cycle.id].fields.status.name }} </div>
+						{%- endif %}
+					</div>
+					<div class=right_part>
+						test2
+						<div class=description><a href='{{ url_for('core_ui.cycle_cases', test_cycle_id=cycle.id) }}'>cycle.description</a>
+					</div>
+					 </div> -->
+<!-- 		<div class=table_container>
+		<table class=cycles cellspacing=0; cellpadding=10;>
+			<tr>
+              	{%- for column_name in ('Id', 'Name', 'Description') %}
+					<td class=column_name>{{ column_name }}</td>
+				{%- endfor %}
+			<tr>
+			{%- for cycle in cycle_list %}
+				<td class=cycle_id ><a class=link href='{{ url_for('core_ui.cycle_cases', test_cycle_id=cycle.id) }}'>{{ cycle.id }}</a></td>
+				<td class=name >{{ cycle.name }} </td>
+				<td class=description > <span style="padding-left:3px;">{{ cycle.description }}</span> </td>
+				{%- if use_jira and jira_host and cycle.id in cycle_issues %}
+					<a class=jira_issue href='{{ jira_host }}/browse/{{ cycle_issues[cycle.id].key }}'>{{ cycle_issues[cycle.id].key }}</a>
+					<div class=jira_status>{{ cycle_issues[cycle.id].fields.status.name }}</div>
+				{%- endif %}
+				</tr>
+			{%- endfor %}
+		</table>
+		</div> -->

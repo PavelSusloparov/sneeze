@@ -1,0 +1,114 @@
+<html>
+<head>
+	<title>Pocket Change - Cycle Case Rollup</title>
+	<link rel=stylesheet media=screen href='{{ url_for('core_ui.static', filename='cycle_case_rollup.css') }}'>
+	<script type='text/javascript' src='{{ url_for('core_ui.static', filename='cycle_case_rollup.js') }}'></script>
+</head>
+<body>
+	<div class=cycle_case_rollup>
+		<div class=cycle_container>
+			<div class=links>
+				<a href='{{ url_for('core_ui.cycle_listing') }}'> Cycle_listing </a>
+			</div>
+			<div class=header_container>
+				<div class=ids>
+					<div class=cycle_id>{{ cycle.id }}</div>
+					{%- if use_jira and jira_host and cycle.id in cycle_issues %}
+						<div class=jira_id><a href='{{ jira_host }}/browse/{{ cycle_issues[cycle.id].key }}'>{{ cycle_issues[cycle.id].key }}</a></div>
+					{%- endif %}
+				</div>
+				<div class=description>{{ cycle.description }}</div>
+				<div class=names>
+					<div class=cycle_name>{{ cycle.name }}</div>
+					{%- if use_jira and jira_host and cycle.id in cycle_issues %}
+						<div class=jira_name>{{ cycle_issues[cycle.id].fields.status.name }}</div>
+					{%- endif %}
+				</div>
+			</div>
+		
+			<div class='case_filters'></div>
+
+			<ol class=additional_container>
+				{%- for case in cases %}
+					<li class=additional_container>
+						<div class=case>
+							<div class=left_2_columns_case>
+								<div class=case_id> {{ case.id }} </div>
+							</div>
+							<div class=right_2_columns_case>
+								<div class=label>{{ case.label }}</div>
+							</div>
+						</div>
+						<div class=jira>
+							<div class=left_2_columns_jira>
+								{%- if use_jira %}
+									<div class=jira_summary>
+										<div class=result_status_{{ case_issues[case.id]['rollup_result'].split(' ')[0].lower() }}>
+											{{ case_issues[case.id]['rollup_result'] }}
+										</div>
+									</div>
+								{% endif %}
+							</div>
+							<div class=right_2_columns_jira>
+								{%- if use_jira %}
+									<div class=jira_issues>
+										{% for issue in case_issues[case.id]['issues'] %}
+											<a href='{{ jira_host }}/browse/{{ issue.key }}'>{{ issue.key }}</a>
+										{% endfor %}
+									</div>
+								{% endif %}
+							</div>
+						</div>
+
+						<ol>
+							{%- for execution in executions_by_case[case.id] %}
+								<li>
+									<div class=execution_container>
+										<div class=left_3_columns>
+											<div class=execution_id>
+												<a href='{{ url_for('core_ui.case_execution_details', case_execution_id=execution.id) }}'>{{ execution.id }}</a>
+											</div>
+										</div>
+										<div class=right_3_columns>
+											<div class=result>
+												<div class=result_status_{{ execution.result.lower() }}>
+													{{ execution.result }}
+												</div>
+											</div>
+										</div>
+										<div class=center_3_columns>
+											<div class=description>
+												<a href='{{ url_for('core_ui.case_execution_details', case_execution_id=execution.id) }}'>{{ execution.description }}</a>
+											</div>
+										</div>
+									</div>
+								</li>
+								
+								<li>
+									<div class=log_container>
+										<div class=left_2_columns>
+											<div class=start_time>{{ execution.start_time }}</div>
+											<div class=end_time>{{ execution.end_time }}</div>
+										</div> 
+										<div class=right_2_columns>
+											{%- if execution.result != 'PASS' and execution.log_messages %}
+												<div class=last_log_message>{%- if execution.log_messages[-1].source == 'test.capture' -%}
+														{{ execution.log_messages[-2].message }}{%- else -%}
+														{{ execution.log_messages[-1].message }}{%- endif -%}
+												</div>
+											{%- endif %}
+										</div>
+									</div>
+								</li>
+								<li></li>
+							{% endfor %}
+						</ol>
+					</li>
+					{%- endfor %}
+				</ol>
+			</div>
+		</div>
+	</div>
+	<script type='text/javascript'>initFilters()</script>
+</body>
+</html>

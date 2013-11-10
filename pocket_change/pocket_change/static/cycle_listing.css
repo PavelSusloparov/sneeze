@@ -1,0 +1,268 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+/* Global container */
+div.cycle_listing
+{
+	position:relative;
+	margin: 10px 0px 0px 10px;
+    width: 1000px;
+}
+
+/*============================*/
+/*=======Filter form==========*/
+/*============================*/
+
+div.cycle_listing div.header_container{
+	width: 100%;
+}
+div.cycle_listing div.header_container div.filter_box
+{
+	float: left;
+  	width: 330px;
+  	padding: 10px 0px 10px 10px;
+  	background: #008080;
+  	border-radius: 3px;
+}
+div.cycle_listing div.header_container div.filter_box div.filter_info
+{
+    width: 98%;
+    font:15px verdana;
+    margin: 10px;
+}
+div.cycle_listing div.header_container div.filter_box div.filter_info span.wrap
+{
+	white-space: pre-wrap;      /* CSS3 */   
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -pre-wrap;     /* Opera <7 */   
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    word-wrap: break-word;      /* IE */
+}
+div.cycle_listing div.header_container div.filter_box div.filter_info span.wrap span.label
+{
+	font-weight: bold;
+}
+
+input {
+  font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+input[type=submit]
+{
+  display: inline-block;
+  padding: 3px 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 10px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  white-space: nowrap;
+  background-image: none;
+  -moz-user-select: none;
+  color: rgb(255, 255, 255);
+  line-height: 1.33;
+  border-radius: 6px;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15) inset, 0px 1px 1px rgba(0, 0, 0, 0.075);
+  background-image: linear-gradient(to bottom, #800000 0px, #671515 100%);
+  background-repeat: repeat-x;
+  border-color: #671515;
+  /* #008080
+  #804000
+  #800000 - #671515 */
+}
+
+input[type=submit]:hover, input[type=submit]:focus
+{
+    background-image: linear-gradient(to bottom, #671515 0px, #813434 100%);
+    border-color: #671515;
+    text-decoration: none;
+}
+
+/*============================*/
+/*=======Filter form end======*/
+/*============================*/
+
+/*============================*/
+/*=======Cycle table==========*/
+/*============================*/
+
+div.cycle_listing div.cycle_container
+{
+	width: 100%;
+  	margin: 30px auto;
+  	padding: 10px;
+	background: #008080;
+	float:left;
+}
+
+div.cycle_listing div.cycle_container a
+{
+	text-decoration: none;
+	color: blue;
+}
+
+div.cycle_listing div.cycle_container a:hover
+{
+	text-decoration: underline;
+}
+div.cycle_listing div.cycle_container a:visited
+{
+	color: darkblue;
+}
+
+div.cycle_listing div.cycle_container ol
+{
+  	list-style-type: none;
+  	border-radius: 3px;
+}
+
+div.cycle_listing div.cycle_container li
+{
+  	position: relative;
+  	margin-bottom: 10px;
+  	padding: 10px;
+  	clear:both;
+	font-size: 18px;
+	text-align: center;
+	border:1px dotted yellow;
+	border-radius: 3px;
+}
+
+div.cycle_listing div.cycle_container li div.ids
+{
+	width: 50px;
+	float: left;
+	font-size: 18px;
+}
+div.cycle_listing div.cycle_container li div.ids div.cycle_id
+{
+	width: 100%;
+	padding: 10px 0px;
+	text-align: center;
+	background: white;
+	border-radius: 3px;
+	font-weight:bold;
+}
+
+div.cycle_listing div.cycle_container li div.ids div.jira_name
+{
+	font-size: 14px;
+	float:left;
+}
+
+div.cycle_listing div.cycle_container li div.ids div.jira_id
+{
+	width: 100%;
+	padding: 10px 0px;
+	background: white;
+	margin-top: 10px;
+	border-radius: 3px;
+}
+
+div.cycle_listing div.cycle_container li div.description
+{
+	width: 810px;
+	float: right;
+    background: white;
+    padding: 10px 0px;
+	border-radius: 3px;
+}
+
+div.cycle_listing div.cycle_container li div.description div.content
+{
+	
+}
+
+div.cycle_listing div.cycle_container li div.names
+{
+	margin-left:60px;
+	margin-right:820px;
+}
+
+div.cycle_listing div.cycle_container li div.names div.cycle_name
+{
+	width:100%;
+	padding: 10px 0px;
+	background: white;
+	border-radius: 3px;
+}
+div.cycle_listing div.cycle_container li div.names div.jira_name
+{
+	width:100%;
+	padding: 10px 0px;
+	background: white;
+	margin-top: 10px;
+	border-radius: 3px;
+}
+/*============================*/
+/*=======Cycle table end =====*/
+/*============================*/
+
+/*============================*/
+/*=======Navigation panel=====*/
+/*============================*/
+div.list_container{
+	margin-left: 360px;
+	width: 66%;
+	font: 15px verdana;
+	text-decoration:none;
+	padding-top:20px;
+	color: #804000;
+}
+div.list_container div.prev_link
+{
+	position:relative;
+	margin-left: 60px;
+	float:left;
+	text-decoration: none;
+}
+div.list_container div.prev_link a.disabled
+{
+	color: lightgrey;
+}
+div.list_container div.offset
+{
+	font-weight:bold;
+	margin-left:60px;
+	margin-right:400px;
+	text-align: center;
+}
+div.list_container div.next_link
+{
+	position:relative;
+	margin-right: 400px;
+	float:right;
+	text-decoration: none;
+}
+div.list_container div.next_link a.disabled
+{
+	color: lightgrey;
+}
+/*============================*/
+/*===Navigation panel end=====*/
+/*============================*/
+
+EOF

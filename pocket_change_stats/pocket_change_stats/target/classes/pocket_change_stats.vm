@@ -1,0 +1,23 @@
+#if ($issueType == "Test Cycle")
+	<span> 
+		<a href=$testCycle.getCycleUrl()>$testCycle.getCycleDescription()</a> <br/>
+		Running Count: $testCycle.getRunningCount()
+	</span>
+#elseif ($issueType == "Test Failure")
+
+	#foreach ($relatedCase in $relatedCaseExec)
+		<span>
+			#if ($relatedCase.getResult() == "PASS")
+				<img src="$baseUrl/download/resources/com.nytimes.automation.pocket_change_stats.pocket_change_stats:pocket_change_stats-resources/images/green.png" width="10">
+			#elseif ($relatedCase.getResult() == "FAIL")
+				<img src="$baseUrl/download/resources/com.nytimes.automation.pocket_change_stats.pocket_change_stats:pocket_change_stats-resources/images/red.png" width="10">
+			#elseif ($relatedCase.getResult() == "SKIP")
+				<img src="$baseUrl/download/resources/com.nytimes.automation.pocket_change_stats.pocket_change_stats:pocket_change_stats-resources/images/gray.png" width="10">
+			#end
+				<a href="$relatedCase.getCaseUrl()">$relatedCase.getCaseDescription()</a>
+			<br/>
+			
+		</span>
+	#end
+	
+#end

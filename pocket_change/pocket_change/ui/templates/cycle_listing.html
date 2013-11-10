@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>Pocket Change - Cycle Listing</title>
+	<link rel=stylesheet media=screen href='{{ url_for('core_ui.static', filename='cycle_listing.css') }}'>
+</head>
+<body>
+	<div class=cycle_listing>
+		<div class=header_container>
+			<div class=filter_box>
+				<form name="filter" method="post">
+					<p class="submit">
+						<input type="text" name="filter">
+						<input type="submit" name="commit" value="Get Matching Cycles">
+					</p>
+				</form>
+				{% if filter %}
+				<div class=filter_info>
+					<span class=wrap><span class=label>Current Filter: </span>{{ filter }}</span>
+				</div>
+				{% endif %}
+			</div>
+			<div class=list_container>
+				<div class=list_nav>
+					<div class=prev_link>
+						{% if offset!=1 %}
+							<a href='{{ url_for('core_ui.cycle_listing', filter=filter if filter else None, offset=offset-1) }}'> << </a>
+						{% else %}
+							<a class="disabled" onclick="return false;" href='{{ url_for('core_ui.cycle_listing', filter=filter if filter else None, offset=offset-1) }}'> << </a>
+						{% endif %}
+					</div>
+					<div class=next_link>
+						{% if has_next %}
+							<a href='{{ url_for('core_ui.cycle_listing', filter=filter if filter else None, offset=offset+1) }}'> >> </a>
+						{% else %}
+							<a class="disabled" onclick="return false;" href='{{ url_for('core_ui.cycle_listing', filter=filter if filter else None, offset=offset+1) }}'> >></a>
+						{% endif %}
+					</div>
+					<div class=offset>{{ offset }}</div>
+				</div>
+			</div>
+		</div>
+
+		<div class=cycle_container>
+			<ol>
+				{%- for cycle in cycle_list %}
+					<li>
+						<div class=ids>
+							<div class=cycle_id><a href='{{ url_for('core_ui.cycle_cases', test_cycle_id=cycle.id) }}'>{{ cycle.id }}</a></div>
+							{%- if use_jira and jira_host and cycle.id in cycle_issues %}
+								<div class=jira_name>id</div>
+								<div class=jira_id><a href='{{ jira_host }}/browse/{{ cycle_issues[cycle.id].key }}'>{{ cycle_issues[cycle.id].key }}</a></div>
+							{%- endif %}
+						</div>
+						<div class=description>
+							{{ cycle.description }}
+						</div>
+						<div class=names>
+							<div class=cycle_name>
+								{{ cycle.name }}
+							</div>
+							{%- if use_jira and jira_host and cycle.id in cycle_issues %}
+								<div class=jira_name>{{ cycle_issues[cycle.id].fields.status.name }}</div>
+							{%- endif %}
+						</div>
+					</li>
+				{%- endfor %}
+			 </ol>
+		</div>
+		
+	</div>
+</body>
+</html>
