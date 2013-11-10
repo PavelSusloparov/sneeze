@@ -25,6 +25,9 @@ div.case_execution_details
     width: 1000px;
 }
 
+/*============================*/
+/*=== Execution details ======*/
+/*============================*/
 div.case_execution_details div.execution_details
 {
 	width: 100%;
@@ -61,7 +64,9 @@ div.case_execution_details div.execution_details div.header_container
 	background: #008080;
 	margin-bottom: 10px;
 }
-
+/*============================*/
+/*=== Test container =========*/
+/*============================*/
 div.case_execution_details div.execution_details div.header_container div.test_container
 {
   	position: relative;
@@ -133,6 +138,9 @@ div.case_execution_details div.execution_details div.header_container div.test_c
     padding: 5px 10px;
     border: 1px solid #333;
 }
+/*============================*/
+/*=== Test container end======*/
+/*============================*/
 div.case_execution_details div.execution_details div.header_container div.children_section{
 	padding-bottom: 10px;
 }
@@ -141,6 +149,9 @@ div.case_execution_details div.execution_details div.header_container div.childr
 	padding: 10px 10px 10px 10px;
 	margin: 10px;
 }
+/*============================*/
+/*=== Execution container ====*/
+/*============================*/
 div.case_execution_details div.execution_details div.header_container div.children_section div.execution_container{
 }
 
@@ -221,7 +232,9 @@ div.case_execution_details div.execution_details div.header_container div.childr
     padding: 5px 10px;
     border: 1px solid #333;
 }
-/* log_container */
+/*============================*/
+/*=== Log container ==========*/
+/*============================*/
 div.case_execution_details div.execution_details div.header_container div.children_section div.log_container{
 	padding: 10px;
 }
@@ -320,11 +333,15 @@ div.case_execution_details div.execution_details div.header_container div.childr
     border: 1px solid #333;
 }
 /*============================*/
+/*=== Log container end=======*/
+/*============================*/
+
+/*============================*/
 /*=== Execution details end ==*/
 /*============================*/
 
 /*============================*/
-/*========= log list =========*/
+/*========= Log list =========*/
 /*============================*/
 
 ol.log_list{

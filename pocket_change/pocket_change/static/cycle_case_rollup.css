@@ -26,7 +26,7 @@ div.cycle_case_rollup
     width: 1000px;
 }
 /*============================*/
-/*=======Cycle header==========*/
+/*=======Cycle container======*/
 /*============================*/
 
 div.cycle_container
@@ -184,11 +184,11 @@ div.cycle_container div.header_container div.names div.jira_name:hover::after {
     border: 1px solid #333;
 }
 /*============================*/
-/*=======Cycle header end=====*/
+/*=======Cycle container end==*/
 /*============================*/
 
 /*============================*/
-/*=======Cycle table==========*/
+/*=======Cycle cases==========*/
 /*============================*/
 
 div.cycle_container ol
@@ -198,7 +198,7 @@ div.cycle_container ol
   	padding: 10px;
 }
 
-div.cycle_container li.additional_container
+div.cycle_container li.data_container
 {
   	position: relative;
   	margin-bottom: 30px;
@@ -209,20 +209,15 @@ div.cycle_container li.additional_container
   	background:#008080;
 }
 
-/* Two columns */
-/* Case */
-div.case
-{
-	
-}
-div.cycle_container li.additional_container div.case div.left_2_columns_case
+div.case{}
+div.cycle_container li.data_container div.case div.left_2_columns_case
 {
 	width: 50px;
 	float: left;
 	font-size: 18px;
 }
 
-div.cycle_container li.additional_container div.case div.left_2_columns_case div.case_id
+div.cycle_container li.data_container div.case div.left_2_columns_case div.case_id
 {
 	width: 100%;
 	padding: 10px 0px;
@@ -232,7 +227,7 @@ div.cycle_container li.additional_container div.case div.left_2_columns_case div
 	background:white;
 	border-radius: 3px;
 }
-div.cycle_container li.additional_container div.case div.left_2_columns_case div.case_id:hover::after {
+div.cycle_container li.data_container div.case div.left_2_columns_case div.case_id:hover::after {
     content: attr(data-title);
     position: absolute;
     left: 5%; top: 3%;
@@ -244,13 +239,13 @@ div.cycle_container li.additional_container div.case div.left_2_columns_case div
     padding: 5px 10px;
     border: 1px solid #333;
 }
-div.cycle_container li.additional_container div.case div.right_2_columns_case
+div.cycle_container li.data_container div.case div.right_2_columns_case
 {
 	padding-left: 60px;
 	width: 93%;
 }
 
-div.cycle_container li.additional_container div.case div.right_2_columns_case .label
+div.cycle_container li.data_container div.case div.right_2_columns_case .label
 {
 	width:100%;
 	padding: 10px 0px;
@@ -263,7 +258,7 @@ div.cycle_container li.additional_container div.case div.right_2_columns_case .l
     word-wrap: break-word;      /* IE */
     text-align: center;
 }
-div.cycle_container li.additional_container div.case div.right_2_columns_case .label:hover::after {
+div.cycle_container li.data_container div.case div.right_2_columns_case .label:hover::after {
     content: attr(data-title);
     position: absolute;
     left: 97%; top: 0%;
@@ -276,24 +271,24 @@ div.cycle_container li.additional_container div.case div.right_2_columns_case .l
     border: 1px solid #333;
 }
 /* Jira */
-div.cycle_container li.additional_container div.jira
+div.cycle_container li.data_container div.jira
 {
 	margin-top: 10px;
 }
-div.cycle_container li.additional_container div.jira div.left_2_columns_jira
+div.cycle_container li.data_container div.jira div.left_2_columns_jira
 {
 	width: 130px;
 	float: left;
 }
 
-div.cycle_container li.additional_container div.jira div.left_2_columns_jira div.jira_summary
+div.cycle_container li.data_container div.jira div.left_2_columns_jira div.jira_summary
 {
 	padding: 10px 0px;
 	text-align: center;
 	background:white;
 	border-radius: 3px;
 }
-div.cycle_container li.additional_container div.jira div.left_2_columns_jira div.jira_summary:hover::after {
+div.cycle_container li.data_container div.jira div.left_2_columns_jira div.jira_summary:hover::after {
     content: attr(data-title);
     position: absolute;
     left: 5%; top: 3%;
@@ -305,13 +300,13 @@ div.cycle_container li.additional_container div.jira div.left_2_columns_jira div
     padding: 5px 10px;
     border: 1px solid #333;
 }
-div.cycle_container li.additional_container div.jira div.right_2_columns_jira
+div.cycle_container li.data_container div.jira div.right_2_columns_jira
 {
 	padding-left: 140px;
 	width: 85%;
 }
 
-div.cycle_container li.additional_container div.jira div.right_2_columns_jira div.jira_issues
+div.cycle_container li.data_container div.jira div.right_2_columns_jira div.jira_issues
 {
 	width:100%;
 	padding: 10px 0px;
@@ -324,7 +319,7 @@ div.cycle_container li.additional_container div.jira div.right_2_columns_jira di
     word-wrap: break-word;      /* IE */
     text-align: center;
 }
-div.cycle_container li.additional_container div.jira div.right_2_columns_jira div.jira_issues:hover::after {
+div.cycle_container li.data_container div.jira div.right_2_columns_jira div.jira_issues:hover::after {
     content: attr(data-title);
     position: absolute;
     left: 97%; top: 0%;
@@ -336,7 +331,7 @@ div.cycle_container li.additional_container div.jira div.right_2_columns_jira di
     padding: 5px 10px;
     border: 1px solid #333;
 }
-div.cycle_container li.additional_container ol
+div.cycle_container li.data_container ol
 {
 	list-style-type: none;
 	border-radius: 3px;
@@ -345,23 +340,23 @@ div.cycle_container li.additional_container ol
 	padding: 10px;
 }
 
-div.cycle_container li.additional_container li
+div.cycle_container li.data_container li
 {
   	position: relative;
   	clear:both;
 }
 
 /* execution_container */
-div.cycle_container li.additional_container li div.execution_container{
+div.cycle_container li.data_container li div.execution_container{
 }
 
-div.cycle_container li.additional_container li div.execution_container div.left_3_columns
+div.cycle_container li.data_container li div.execution_container div.left_3_columns
 {
 	width: 50px;
 	float: left;
 }
 
-div.cycle_container li.additional_container li div.execution_container div.left_3_columns div.execution_id
+div.cycle_container li.data_container li div.execution_container div.left_3_columns div.execution_id
 {
 	width:100%;
 	padding: 10px 0px;
@@ -370,7 +365,7 @@ div.cycle_container li.additional_container li div.execution_container div.left_
   	background: white;
   	font-size: 18px;
 }
-div.cycle_container li.additional_container li div.execution_container div.left_3_columns div.execution_id:hover::after {
+div.cycle_container li.data_container li div.execution_container div.left_3_columns div.execution_id:hover::after {
     content: attr(data-title);
     position: absolute;
     left: 4.5%; top: 0%;
@@ -382,12 +377,12 @@ div.cycle_container li.additional_container li div.execution_container div.left_
     padding: 5px 10px;
     border: 1px solid #333;
 }
-div.cycle_container li.additional_container li div.execution_container div.right_3_columns
+div.cycle_container li.data_container li div.execution_container div.right_3_columns
 {
 	width: 150px;
 	float: right;
 }
-div.cycle_container li.additional_container li div.execution_container div.right_3_columns div.result
+div.cycle_container li.data_container li div.execution_container div.right_3_columns div.result
 {
 	padding: 10px 0px;
 	border-radius: 3px;
@@ -395,7 +390,7 @@ div.cycle_container li.additional_container li div.execution_container div.right
 	background: white;
 	font-size: 18px;
 }
-div.cycle_container li.additional_container li div.execution_container div.right_3_columns div.result:hover::after {
+div.cycle_container li.data_container li div.execution_container div.right_3_columns div.result:hover::after {
     content: attr(data-title);
     position: absolute;
     left: 97%; top: 0%;
@@ -407,20 +402,20 @@ div.cycle_container li.additional_container li div.execution_container div.right
     padding: 5px 10px;
     border: 1px solid #333;
 }
-div.cycle_container li.additional_container li div.execution_container div.center_3_columns
+div.cycle_container li.data_container li div.execution_container div.center_3_columns
 {
 	margin-left:60px;
 	margin-right:160px;
 }
 
-div.cycle_container li.additional_container li div.execution_container div.center_3_columns div.description
+div.cycle_container li.data_container li div.execution_container div.center_3_columns div.description
 {
 	padding: 10px 0px;
 	background: white;
 	text-align: center;
 	border-radius: 3px;
 }
-div.cycle_container li.additional_container li div.execution_container div.center_3_columns div.description:hover::after {
+div.cycle_container li.data_container li div.execution_container div.center_3_columns div.description:hover::after {
     content: attr(data-title);
     position: absolute;
     left: 80%; top: 0%;
@@ -433,17 +428,17 @@ div.cycle_container li.additional_container li div.execution_container div.cente
     border: 1px solid #333;
 }
 /* log_container */
-div.cycle_container li.additional_container li div.log_container{
+div.cycle_container li.data_container li div.log_container{
 	margin-top: 10px;
 }
 
-div.cycle_container li.additional_container li div.log_container div.left_2_columns
+div.cycle_container li.data_container li div.log_container div.left_2_columns
 {
 	width: 120px;
 	float: left;
 }
 
-div.cycle_container li.additional_container li div.log_container div.left_2_columns div.start_time
+div.cycle_container li.data_container li div.log_container div.left_2_columns div.start_time
 {
 	width: 100%;
 	padding: 0px 9px;
@@ -452,7 +447,7 @@ div.cycle_container li.additional_container li div.log_container div.left_2_colu
   	background: white;
 	text-align: center;
 }
-div.cycle_container li.additional_container li div.log_container div.left_2_columns div.start_time:hover::after {
+div.cycle_container li.data_container li div.log_container div.left_2_columns div.start_time:hover::after {
     content: attr(data-title);
     position: absolute;
     left: 14%; top: 3%;
@@ -464,7 +459,7 @@ div.cycle_container li.additional_container li div.log_container div.left_2_colu
     padding: 5px 10px;
     border: 1px solid #333;
 }
-div.cycle_container li.additional_container li div.log_container div.left_2_columns div.end_time
+div.cycle_container li.data_container li div.log_container div.left_2_columns div.end_time
 {
 	width:100%;
 	padding: 0px 9px;
@@ -473,7 +468,7 @@ div.cycle_container li.additional_container li div.log_container div.left_2_colu
   	background: white;
 	text-align: center;
 }
-div.cycle_container li.additional_container li div.log_container div.left_2_columns div.end_time:hover::after {
+div.cycle_container li.data_container li div.log_container div.left_2_columns div.end_time:hover::after {
     content: attr(data-title);
     position: absolute;
     left: 14%; top: 65%;
@@ -485,13 +480,13 @@ div.cycle_container li.additional_container li div.log_container div.left_2_colu
     padding: 5px 10px;
     border: 1px solid #333;
 }
-div.cycle_container li.additional_container li div.log_container div.right_2_columns
+div.cycle_container li.data_container li div.log_container div.right_2_columns
 {
 	padding-left: 150px;
 	width: 92%;
 }
 
-div.cycle_container li.additional_container li div.log_container div.right_2_columns div.last_log_message
+div.cycle_container li.data_container li div.log_container div.right_2_columns div.last_log_message
 {
 	width:91%;
 	padding: 10px 0px;
@@ -503,7 +498,7 @@ div.cycle_container li.additional_container li div.log_container div.right_2_col
     white-space: -o-pre-wrap;   /* Opera 7 */    
     word-wrap: break-word;      /* IE */
 }
-div.cycle_container li.additional_container li div.log_container div.right_2_columns div.last_log_message:hover::after {
+div.cycle_container li.data_container li div.log_container div.right_2_columns div.last_log_message:hover::after {
     content: attr(data-title);
     position: absolute;
     left: 97%; top: 0%;
@@ -516,5 +511,8 @@ div.cycle_container li.additional_container li div.log_container div.right_2_col
     border: 1px solid #333;
 }
 /*============================*/
-/*=======Cycle table end =====*/
+/*=======Cycle cases end======*/
 /*============================*/
+
+/* EOF */
+
