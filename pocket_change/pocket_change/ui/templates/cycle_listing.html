@@ -45,21 +45,21 @@
 				{%- for cycle in cycle_list %}
 					<li>
 						<div class=ids>
-							<div class=cycle_id><a href='{{ url_for('core_ui.cycle_cases', test_cycle_id=cycle.id) }}'>{{ cycle.id }}</a></div>
+							<div class=cycle_id data-title=cycle_id><a href='{{ url_for('core_ui.cycle_cases', test_cycle_id=cycle.id) }}'>{{ cycle.id }}</a></div>
 							{%- if use_jira and jira_host and cycle.id in cycle_issues %}
-								<div class=jira_name>id</div>
-								<div class=jira_id><a href='{{ jira_host }}/browse/{{ cycle_issues[cycle.id].key }}'>{{ cycle_issues[cycle.id].key }}</a></div>
+								<div class=jira_name data-title=jira_name>id</div>
+								<div class=jira_id data-title=jira_id><a href='{{ jira_host }}/browse/{{ cycle_issues[cycle.id].key }}'>{{ cycle_issues[cycle.id].key }}</a></div>
 							{%- endif %}
 						</div>
-						<div class=description>
+						<div class=description data-title=description>
 							{{ cycle.description }}
 						</div>
 						<div class=names>
-							<div class=cycle_name>
+							<div class=cycle_name data-title=cycle_name>
 								{{ cycle.name }}
 							</div>
 							{%- if use_jira and jira_host and cycle.id in cycle_issues %}
-								<div class=jira_name>{{ cycle_issues[cycle.id].fields.status.name }}</div>
+								<div class=jira_name data-title=jira_name>{{ cycle_issues[cycle.id].fields.status.name }}</div>
 							{%- endif %}
 						</div>
 					</li>

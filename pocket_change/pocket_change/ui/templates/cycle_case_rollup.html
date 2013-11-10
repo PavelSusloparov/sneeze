@@ -8,20 +8,20 @@
 	<div class=cycle_case_rollup>
 		<div class=cycle_container>
 			<div class=links>
-				<a href='{{ url_for('core_ui.cycle_listing') }}'> Cycle_listing </a>
+				<a href='{{ url_for('core_ui.cycle_listing') }}' data-title=cycle_id> Cycle_listing </a>
 			</div>
 			<div class=header_container>
 				<div class=ids>
-					<div class=cycle_id>{{ cycle.id }}</div>
+					<div class=cycle_id data-title=cycle_id>{{ cycle.id }}</div>
 					{%- if use_jira and jira_host and cycle.id in cycle_issues %}
-						<div class=jira_id><a href='{{ jira_host }}/browse/{{ cycle_issues[cycle.id].key }}'>{{ cycle_issues[cycle.id].key }}</a></div>
+						<div class=jira_id data-title=jira_id><a href='{{ jira_host }}/browse/{{ cycle_issues[cycle.id].key }}'>{{ cycle_issues[cycle.id].key }}</a></div>
 					{%- endif %}
 				</div>
-				<div class=description>{{ cycle.description }}</div>
+				<div class=description data-title=description>{{ cycle.description }}</div>
 				<div class=names>
-					<div class=cycle_name>{{ cycle.name }}</div>
+					<div class=cycle_name data-title=cycle_name>{{ cycle.name }}</div>
 					{%- if use_jira and jira_host and cycle.id in cycle_issues %}
-						<div class=jira_name>{{ cycle_issues[cycle.id].fields.status.name }}</div>
+						<div class=jira_name data-title=jira_name>{{ cycle_issues[cycle.id].fields.status.name }}</div>
 					{%- endif %}
 				</div>
 			</div>
@@ -33,16 +33,16 @@
 					<li class=additional_container>
 						<div class=case>
 							<div class=left_2_columns_case>
-								<div class=case_id> {{ case.id }} </div>
+								<div class=case_id data-title=case_id> {{ case.id }} </div>
 							</div>
 							<div class=right_2_columns_case>
-								<div class=label>{{ case.label }}</div>
+								<div class=label data-title=label>{{ case.label }}</div>
 							</div>
 						</div>
 						<div class=jira>
 							<div class=left_2_columns_jira>
 								{%- if use_jira %}
-									<div class=jira_summary>
+									<div class=jira_summary data-title=jira_summary>
 										<div class=result_status_{{ case_issues[case.id]['rollup_result'].split(' ')[0].lower() }}>
 											{{ case_issues[case.id]['rollup_result'] }}
 										</div>
@@ -51,7 +51,7 @@
 							</div>
 							<div class=right_2_columns_jira>
 								{%- if use_jira %}
-									<div class=jira_issues>
+									<div class=jira_issues data-title=jira_issues>
 										{% for issue in case_issues[case.id]['issues'] %}
 											<a href='{{ jira_host }}/browse/{{ issue.key }}'>{{ issue.key }}</a>
 										{% endfor %}
@@ -65,19 +65,19 @@
 								<li>
 									<div class=execution_container>
 										<div class=left_3_columns>
-											<div class=execution_id>
+											<div class=execution_id data-title=execution_id>
 												<a href='{{ url_for('core_ui.case_execution_details', case_execution_id=execution.id) }}'>{{ execution.id }}</a>
 											</div>
 										</div>
 										<div class=right_3_columns>
-											<div class=result>
+											<div class=result data-title=result>
 												<div class=result_status_{{ execution.result.lower() }}>
 													{{ execution.result }}
 												</div>
 											</div>
 										</div>
 										<div class=center_3_columns>
-											<div class=description>
+											<div class=description data-title=description>
 												<a href='{{ url_for('core_ui.case_execution_details', case_execution_id=execution.id) }}'>{{ execution.description }}</a>
 											</div>
 										</div>
@@ -87,12 +87,12 @@
 								<li>
 									<div class=log_container>
 										<div class=left_2_columns>
-											<div class=start_time>{{ execution.start_time }}</div>
-											<div class=end_time>{{ execution.end_time }}</div>
+											<div class=start_time data-title=start_time>{{ execution.start_time }}</div>
+											<div class=end_time data-title=end_time>{{ execution.end_time }}</div>
 										</div> 
 										<div class=right_2_columns>
 											{%- if execution.result != 'PASS' and execution.log_messages %}
-												<div class=last_log_message>{%- if execution.log_messages[-1].source == 'test.capture' -%}
+												<div class=last_log_message data-title=last_log_message>{%- if execution.log_messages[-1].source == 'test.capture' -%}
 														{{ execution.log_messages[-2].message }}{%- else -%}
 														{{ execution.log_messages[-1].message }}{%- endif -%}
 												</div>

@@ -19,7 +19,7 @@ time, mark, audio, video
 }
 
 /* Global container */
-.cycle_case_rollup
+div.cycle_case_rollup
 {
 	position:relative;
 	margin: 10px 0px 0px 10px;
@@ -57,6 +57,7 @@ div.cycle_container div.links a
 	margin-right: 20px;
 }
 
+
 div.cycle_container div.header_container
 {
 	background: #008080;
@@ -66,14 +67,12 @@ div.cycle_container div.header_container
 	text-align: center;
 	padding: 10px;
 }
-
 div.cycle_container div.header_container div.ids
 {
 	width: 50px;
 	float: left;
 	font-size: 18px;
 }
-
 div.cycle_container div.header_container div.ids div.cycle_id
 {
 	width: 100%;
@@ -82,7 +81,19 @@ div.cycle_container div.header_container div.ids div.cycle_id
 	background: white;
 	border-radius: 3px;
 }
-div.cycle_container div.header_container div.ids .jira_id
+div.cycle_container div.header_container div.ids div.cycle_id:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 13%; top: 3%;
+    z-index: 1;
+    background: rgba(128,64,0,0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
+div.cycle_container div.header_container div.ids div.jira_id
 {
 	width: 100%;
 	padding: 10px 0px;
@@ -90,7 +101,18 @@ div.cycle_container div.header_container div.ids .jira_id
 	margin-top: 10px;
 	border-radius: 3px;
 }
-
+div.cycle_container div.header_container div.ids div.jira_id:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 13%; top: 3%;
+    z-index: 1;
+    background: rgba(128,64,0,0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
 div.cycle_container div.header_container div.description
 {
 	width: 810px;
@@ -105,25 +127,61 @@ div.cycle_container div.header_container div.description
     background: white;
     border-radius: 3px;
 }
+div.cycle_container div.header_container div.description:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 13%; top: 3%;
+    z-index: 1;
+    background: rgba(128,64,0,0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
 div.cycle_container div.header_container div.names
 {
 	margin-left:60px;
 	margin-right:820px;
 }
-div.cycle_container div.header_container div.names .cycle_name
+div.cycle_container div.header_container div.names div.cycle_name
 {
 	width:100%;
 	padding: 10px 0px;
 	background: white;
 	border-radius: 3px;
 }
-div.cycle_container div.header_container div.names .jira_name
+div.cycle_container div.header_container div.names div.cycle_name:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 13%; top: 3%;
+    z-index: 1;
+    background: rgba(128,64,0,0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
+div.cycle_container div.header_container div.names div.jira_name
 {
 	width:100%;
 	padding: 10px 0px;
 	background: white;
 	margin-top: 10px;
 	border-radius: 3px;
+}
+div.cycle_container div.header_container div.names div.jira_name:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 13%; top: 3%;
+    z-index: 1;
+    background: rgba(128,64,0,0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
 }
 /*============================*/
 /*=======Cycle header end=====*/
@@ -174,7 +232,18 @@ div.cycle_container li.additional_container div.case div.left_2_columns_case div
 	background:white;
 	border-radius: 3px;
 }
-
+div.cycle_container li.additional_container div.case div.left_2_columns_case div.case_id:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 5%; top: 3%;
+    z-index: 1;
+    background: rgba(128,64,0,0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
 div.cycle_container li.additional_container div.case div.right_2_columns_case
 {
 	padding-left: 60px;
@@ -194,7 +263,18 @@ div.cycle_container li.additional_container div.case div.right_2_columns_case .l
     word-wrap: break-word;      /* IE */
     text-align: center;
 }
-
+div.cycle_container li.additional_container div.case div.right_2_columns_case .label:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 97%; top: 0%;
+    z-index: 1;
+    background: rgba(128,64,0,0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
 /* Jira */
 div.cycle_container li.additional_container div.jira
 {
@@ -213,7 +293,18 @@ div.cycle_container li.additional_container div.jira div.left_2_columns_jira div
 	background:white;
 	border-radius: 3px;
 }
-
+div.cycle_container li.additional_container div.jira div.left_2_columns_jira div.jira_summary:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 5%; top: 3%;
+    z-index: 1;
+    background: rgba(128,64,0,0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
 div.cycle_container li.additional_container div.jira div.right_2_columns_jira
 {
 	padding-left: 140px;
@@ -233,7 +324,18 @@ div.cycle_container li.additional_container div.jira div.right_2_columns_jira di
     word-wrap: break-word;      /* IE */
     text-align: center;
 }
-
+div.cycle_container li.additional_container div.jira div.right_2_columns_jira div.jira_issues:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 97%; top: 0%;
+    z-index: 1;
+    background: rgba(128,64,0,0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
 div.cycle_container li.additional_container ol
 {
 	list-style-type: none;
@@ -268,7 +370,18 @@ div.cycle_container li.additional_container li div.execution_container div.left_
   	background: white;
   	font-size: 18px;
 }
-
+div.cycle_container li.additional_container li div.execution_container div.left_3_columns div.execution_id:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 4.5%; top: 0%;
+    z-index: 1;
+    background: rgba(128,64,0,0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
 div.cycle_container li.additional_container li div.execution_container div.right_3_columns
 {
 	width: 150px;
@@ -282,7 +395,18 @@ div.cycle_container li.additional_container li div.execution_container div.right
 	background: white;
 	font-size: 18px;
 }
-
+div.cycle_container li.additional_container li div.execution_container div.right_3_columns div.result:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 97%; top: 0%;
+    z-index: 1;
+    background: rgba(128,64,0,0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
 div.cycle_container li.additional_container li div.execution_container div.center_3_columns
 {
 	margin-left:60px;
@@ -296,7 +420,18 @@ div.cycle_container li.additional_container li div.execution_container div.cente
 	text-align: center;
 	border-radius: 3px;
 }
-
+div.cycle_container li.additional_container li div.execution_container div.center_3_columns div.description:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 80%; top: 0%;
+    z-index: 1;
+    background: rgba(128,64,0,0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
 /* log_container */
 div.cycle_container li.additional_container li div.log_container{
 	margin-top: 10px;
@@ -317,7 +452,18 @@ div.cycle_container li.additional_container li div.log_container div.left_2_colu
   	background: white;
 	text-align: center;
 }
-
+div.cycle_container li.additional_container li div.log_container div.left_2_columns div.start_time:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 14%; top: 3%;
+    z-index: 1;
+    background: rgba(128,64,0,0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
 div.cycle_container li.additional_container li div.log_container div.left_2_columns div.end_time
 {
 	width:100%;
@@ -327,7 +473,18 @@ div.cycle_container li.additional_container li div.log_container div.left_2_colu
   	background: white;
 	text-align: center;
 }
-
+div.cycle_container li.additional_container li div.log_container div.left_2_columns div.end_time:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 14%; top: 65%;
+    z-index: 1;
+    background: rgba(128,64,0,0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
 div.cycle_container li.additional_container li div.log_container div.right_2_columns
 {
 	padding-left: 150px;
@@ -346,7 +503,18 @@ div.cycle_container li.additional_container li div.log_container div.right_2_col
     white-space: -o-pre-wrap;   /* Opera 7 */    
     word-wrap: break-word;      /* IE */
 }
-
+div.cycle_container li.additional_container li div.log_container div.right_2_columns div.last_log_message:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 97%; top: 0%;
+    z-index: 1;
+    background: rgba(128,64,0,0.9);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
 /*============================*/
 /*=======Cycle table end =====*/
 /*============================*/

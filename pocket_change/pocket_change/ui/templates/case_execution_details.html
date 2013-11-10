@@ -14,10 +14,10 @@
 				<div class=test_container>
 					<div class=case>
 						<div class=left_2_columns_case>
-							<div class=case_id> {{ case_execution.case_id }} </div>
+							<div class=case_id data-title=case_id> {{ case_execution.case_id }} </div>
 						</div>
 						<div class=right_2_columns_case>
-							<div class=label>{{ case_execution.case.label }}</div>
+							<div class=label data-title=label>{{ case_execution.case.label }}</div>
 						</div>
 					</div>
 				</div>
@@ -25,25 +25,25 @@
 					<div class=border>
 						<div class=execution_container>
 							<div class=left_3_columns>
-								<div class=execution_id>{{ case_execution.id }}</div>
+								<div class=execution_id data-title=execution_id>{{ case_execution.id }}</div>
 							</div>
 							<div class=right_3_columns>
-								<div class=result>
-									<div class=result_status_{{ case_execution.result.lower().replace(' ', '') }}>{{ case_execution.result.upper() }}</div>
+								<div class=result data-title=result>
+									{{ case_execution.result.upper() }}
 								</div>
 							</div>
 							<div class=center_3_columns>
-								<div class=description>{{ case_execution.description }}</div>
+								<div class=description data-title=description>{{ case_execution.description }}</div>
 							</div>
 						</div>
 						<div class=log_container>
 							<div class=left_2_columns>
-								<div class=start_time>{{ case_execution.start_time }}</div>
-								<div class=end_time>{{ case_execution.end_time }}</div>
+								<div class=start_time data-title=start_time>{{ case_execution.start_time }}</div>
+								<div class=end_time data-title=end_time>{{ case_execution.end_time }}</div>
 							</div> 
 							<div class=right_2_columns>
-								<div class=environment>{{ case_execution.execution_batch.environment }}</div>
-								<div class=host>{{ case_execution.execution_batch.host }}</div>
+								<div class=environment data-title=environment>{{ case_execution.execution_batch.environment }}</div>
+								<div class=host data-title=host>{{ case_execution.execution_batch.host }}</div>
 							</div>
 						</div>
 					</div>
@@ -54,12 +54,12 @@
 					<li class=log>
 						<div class=border>
 							<div class=left_2_columns>
-								<div class=time>{{ log.time_logged }}</div>
-								<div class=level>{{ log.level }}</div>
-								<div class=source>{{ log.source }}</div>
+								<div class=time data-title=time>{{ log.time_logged }}</div>
+								<div class=level data-title=level>{{ log.level }}</div>
+								<div class=source data-title=source>{{ log.source }}</div>
 							</div>
 							<div class=right_2_columns>
-								<div class=message>{{ log.message }}</div>
+								<div class=message data-title=message>{{ log.message }}</div>
 							</div>
 						</div>
 					</li>
@@ -70,13 +70,13 @@
 				{%- for test_cycle in case_execution.test_cycles %}
 					<li>
 						<div class=ids>
-							<div class=cycle_id>
+							<div class=cycle_id data-title=cycle_id>
 								<a class=no_underline href='{{ url_for('core_ui.cycle_cases', test_cycle_id=test_cycle.id) }}'>{{ test_cycle.id }}</a>
 							</div>
 						</div>
-						<div class=description>{{ test_cycle.description }}</div>
+						<div class=description data-title=description>{{ test_cycle.description }}</div>
 						<div class=names>
-							<div class=cycle_name>{{ test_cycle.name }}</div>
+							<div class=cycle_name data-title=cycle_name>{{ test_cycle.name }}</div>
 						</div>
 					</li>
 				{%- endfor %}
